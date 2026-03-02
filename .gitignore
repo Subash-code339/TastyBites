@@ -1,0 +1,19 @@
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore environment / config files
+.env
+config.php
+
+# Ignore IDE / editor files
+.vscode/
+*.code-workspace
+
+# Ignore PHP caches
+*.log
+*.cache
+*.tmp
+
+# Ignore OS-specific files
+desktop.ini
