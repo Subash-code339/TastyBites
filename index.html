@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo"> Tasty<span>Bites </span></div>
+            <nav>
+                <ul>
+                    <li> <a href="Intro.html"> Intro </a> </li>
+                    <li> <a href="Menu.html"> Menu </a> </li>
+                    <li> <a href="About.html"> About Us</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Delicious Food Delivered <br>
+                To Your Doorstep
+            </h1>
+            <p>
+                Fast, fresh, and affordable. <br>Order now and enjoy your meal! <br>
+                Let Us Serve You..
+            </p>
+            <a href="Menu.html" class="button"> Order Now </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p> &copy; 2025 TastyBites. All Rights Reserved </p>
+    </footer>
+
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const welcomeBox = document.createElement("div");
+        welcomeBox.textContent = "👋 Welcome to TastyBites! Enjoy your meal 🍽️";
+        welcomeBox.style.position = "fixed";
+        welcomeBox.style.top = "20px";
+        welcomeBox.style.left = "50%";
+        welcomeBox.style.transform = "translateX(-50%)";
+        welcomeBox.style.backgroundColor = "#fff0f5";
+        welcomeBox.style.color = "#800040";
+        welcomeBox.style.padding = "12px 20px";
+        welcomeBox.style.border = "2px solid #ff99cc";
+        welcomeBox.style.borderRadius = "10px";
+        welcomeBox.style.fontSize = "16px";
+        welcomeBox.style.zIndex = "1000";
+        welcomeBox.style.boxShadow = "0 0 10px rgba(0,0,0,0.2)";
+        welcomeBox.style.opacity = "0";
+        welcomeBox.style.transition = "opacity 0.5s";
+
+        document.body.appendChild(welcomeBox);
+
+        // Show it
+        setTimeout(() => {
+            welcomeBox.style.opacity = "1";
+        }, 100);
+
+        // Hide and remove after 3 seconds
+        setTimeout(() => {
+            welcomeBox.style.opacity = "0";
+            setTimeout(() => welcomeBox.remove(), 500);
+        }, 3000);
+    });
+</script>
+
+
+</html>

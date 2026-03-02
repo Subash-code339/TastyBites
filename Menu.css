@@ -1,0 +1,321 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+header {
+    background-color: rgb(175, 219, 219);
+    padding: 10px 0px 15px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.logo {
+    margin-top: 3px;
+    font-size: 49px;
+    font-weight: 700;
+    color: #e63946;
+    text-align: center;
+    transition: transform 0.4s;
+}
+
+.logo span {
+    color: #2a9d8f;
+}
+
+nav {
+    text-align: right;
+    margin-right: 30px;
+}
+
+.navbar {
+    list-style: none;
+    display: inline-flex;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #e63946;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+
+.cart {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 10;
+    margin-top: 2%;
+    margin-right: 1%;
+
+}
+
+.cart a {
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: solid;
+    background-color: rgb(238, 216, 216);
+    border: solid 2px;
+    border-color: rgb(163, 180, 192);
+    color: rgb(181, 109, 122);
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.cart a:hover {
+    background-color: pink;
+}
+
+.menu {
+    background-color: rgb(205, 219, 231);
+    padding: 1px;
+    margin: -10px;
+    font-size: 35px;
+    text-align: left;
+}
+
+.menu h2 {
+    font-size: 35px;
+    color: violet;
+    text-align: center;
+    margin: 0px 45px 5px 0px;
+    padding: 5px 5px 5px 5px;
+    transition: transform 0.4s;
+}
+
+.logo:hover,
+.menu h2:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    font-size: 20px;
+    text-align: left;
+    color: maroon;
+    margin: 5px 0px 0px 5px;
+    padding: 5px 0px 5px 25px;
+    width: 90%;
+}
+
+.motto {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    margin: -20px 5px 15px 0px;
+    padding-bottom: 20px;
+    color: darkgreen;
+}
+
+/* STARTERS */
+
+.starters,
+.main-course,
+.drinks,
+.desserts {
+    background-color: rgb(205, 219, 231);
+    padding-bottom: 30px;
+}
+
+.starters h2 {
+    font-size: 30px;
+    color: maroon;
+    font-weight: bolder;
+    margin: 3px 50px 4px 30px;
+    /*top, right, bottom, left */
+    padding: 5px 2px 3px 10px;
+    text-align: center;
+}
+
+.starter-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.cheese-balls,
+.french-fries,
+.chicken-chilli,
+.biryani,
+.thakali,
+.pizza,
+.burger,
+.smoothie,
+.mojito,
+.coke,
+.jeri,
+.cheese-cake,
+.strawberry-cake {
+    width: 200px;
+    background-color: rgb(181, 204, 222);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.cheese-balls:hover,
+.french-fries:hover,
+.chicken-chilli:hover,
+.biryani:hover,
+.thakali:hover,
+.pizza:hover,
+.burger:hover,
+.smoothie:hover,
+.mojito:hover,
+.coke:hover,
+.jeri:hover,
+.cheese-cake:hover,
+.strawberry-cake:hover {
+    transform: scale(1.09);
+}
+
+.cheese-balls h3,
+.chicken-chilli h3,
+.french-fries h3,
+.biryani h3,
+.thakali h3,
+.pizza h3,
+.burger h3,
+.smoothie h3,
+.mojito h3,
+.coke h3,
+.jeri h3,
+.cheese-cake h3,
+.strawberry-cake h3 {
+    font-size: 25px;
+    color: rgb(116, 41, 41);
+    margin: 4px 0px 5px 5px;
+    padding: 4px 4px 8px 4px;
+}
+
+.cheese-balls img,
+.french-fries img,
+.chicken-chilli img {
+    height: 180px;
+    width: 160px;
+    margin: 2px 0px 5px 10px;
+    padding: 5px;
+}
+
+.paragraph {
+    font-size: 15px;
+    text-align: left;
+    color: maroon;
+}
+
+.price {
+    font-size: 20px;
+    margin-right: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.button {
+    padding: 5px;
+    background-color: rgba(114, 110, 105, 0.482);
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: color 0.6s;
+    color: rgb(58, 94, 94);
+    display: inline-block;
+    border-style: none;
+}
+
+.button:hover {
+    color: red;
+}
+
+/* Main Course */
+
+.maincourse-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.main-course h2,
+.drinks h2,
+.desserts h2 {
+    font-size: 30px;
+    color: maroon;
+    font-weight: bolder;
+    margin: -19px 50px 4px 30px;
+    /*top, right, bottom, left */
+    padding: 5px 2px 10px 10px;
+    text-align: center;
+}
+
+.biryani img,
+.thakali img,
+.pizza img,
+.burger img,
+.chicken-breast img {
+    height: 170px;
+    width: 140px;
+    padding: 5px;
+}
+
+/* drinks */
+.drink-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.smoothie img,
+.mojito img,
+.coke img {
+    height: 180px;
+    width: 160px;
+    margin: 2px 0px 5px 10px;
+    padding: 5px;
+}
+
+/* desserts */
+
+.dessert-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.jeri img,
+.cheese-cake img,
+.strawberry-cake img {
+    height: 180px;
+    width: 160px;
+    margin: 2px 0px 5px 10px;
+    padding: 5px;
+}
+
+footer {
+    background-color: rgb(175, 219, 219);
+    padding: 15px;
+    text-align: center;
+}

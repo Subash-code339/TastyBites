@@ -1,0 +1,281 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: auth.php");
+    exit;
+}
+
+$name = htmlspecialchars($_SESSION['name']);
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="Menu.css">
+</head>
+
+<body>
+
+    <!-- header section -->
+    <header>
+        <div class="logo">Tasty<span>Bites</span></div>
+        <nav>
+            <ul class="navbar">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Intro.html">Intro</a></li>
+                <li><a href="About.html">About Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="cart">
+        <a id="view-cart-btn">🛒 Cart </a>
+    </div>
+
+
+    <div class="menu">
+        <h2>Menu</h2>
+        <p class="description">Discover our delicious dishes, carefully crafted to satisfy your cravings. Our food
+            delivery menu offers you delicious meals, snacks, and beverages. Choose from starters, main course,
+            drinks, and desserts. Freshly prepared and delivered hot to your door.
+        </p> <br>
+
+        <p class="motto">Satisfaction and Flavor Guaranteed! <br>
+            Your Satisfaction, our Motto!!</p>
+    </div>
+
+    <!-- starters -->
+    <section class="starters">
+        <h2>🥗 Starters & Appetizers</h2> <br>
+        <div class="starter-items">
+
+            <!-- cheese ball start -->
+            <div class="cheese-balls">
+                <h3>Cheese Balls</h3>
+                <img src="Cheese-Balls-1.jpg" alt="A plate of Cheeese Balls served with dips">
+
+                <p class="paragraph">
+                    Crispy on the outside and soft inside, delicious bite-sized, filled with gooey, melted, flavorful
+                    cheese
+                    served with dips.
+                </p> <br>
+                <p class="price">Rs.60</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Cheese Balls">
+                    <input type="hidden" name="price" value="100">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+
+            </div>
+
+            <!-- french-fries -->
+            <div class="french-fries">
+                <h3>French Fries</h3>
+                <img src="French-Fries.jpg" alt="A plate of french fries">
+
+                <p class="paragraph"> Golden, crispy French fries perfectly seasoned and served hot with ketchup
+                    or dip for a tasty treat.</p><br> <br>
+
+                <p class="price">Rs.60</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="French Fries">
+                    <input type="hidden" name="price" value="60">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+
+            </div>
+
+            <!-- chicken chilli -->
+            <div class="chicken-chilli">
+                <h3>Chicken chilli</h3>
+                <img src="Chicken-Chilli.jpg" alt="A plate of Chicken Chilli">
+
+                <p class="paragraph">
+                    Delicious Chicken Chilli-crispy chicken chunks coated in spicy, tangy sauce with onions and
+                    peppers bursting with bold flavor.
+                </p>
+                <p class="price">Rs.149</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Chicken Chilli">
+                    <input type="hidden" name="price" value="149">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <br>
+
+    <!-- Main Course -->
+    <section class="main-course">
+        <h2>🍛 Main Course</h2>
+        <div class="maincourse-items">
+            <!--Chicken Biryani-->
+            <div class="biryani">
+                <h3>Chicken Biryani</h3>
+                <img src="biryani.jpg" alt="A plate of chicken biryani">
+                <p class="paragraph">Aromatic basmati rice layered with tender chicken, slow-cooked with spices and
+                    herbs, garnished with fried onions and fresh mint. A royal, flavorful feast in every bite!</p> <br>
+                <br>
+                <p class="price">Rs.349</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Chicken Biryani">
+                    <input type="hidden" name="price" value="349">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <!--Thakali Khana Set-->
+            <div class="thakali">
+                <h3>Thakali Khana Set</h3>
+                <img src="Thakali khana set.jpg" alt="Thakali khata set">
+                <p class="paragraph">Authentic Nepali Thakali Khana Set served with steamed rice, dal, spicy curry,
+                    vegetables, saag, pickles, papad, salad, and curd — a perfect blend of flavor and tradition.</p>
+                <br> <br>
+                <p class="price">Rs.449 </p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Thakali Khana Set">
+                    <input type="hidden" name="price" value="449">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <!--Pizza -->
+            <div class="pizza">
+                <h3>Margherita Pizza</h3>
+                <img src="pizza.jpeg" alt="Margherita Pizza">
+                <p class="paragraph">Wood-fired Margherita pizza with a crispy golden crust, rich tomato sauce, creamy
+                    mozzarella, fresh basil leaves. Authentic bursting with classic Italian flavor in
+                    every bite.</p> <br> <br>
+                <p class="price">Rs.399</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Margherita Pizza">
+                    <input type="hidden" name="price" value="399">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <!-- cheese burger -->
+            <div class="burger">
+                <h3>Cheese Burger </h3>
+                <img src="chicken burger.webp" alt="Double Patty Chicken Cheese Burger">
+                <p class="paragraph">Delicious chicken burger features juicy grilled chicken patties, crispy bacon,
+                    cheddar cheese, fresh lettuce, tomato, pickles, creamy sauces, and a sesame seed bun - a perfect
+                    indulgent delight!</p> <br>
+                <p class="price">Rs.299</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Cheese Burger">
+                    <input type="hidden" name="price" value="299">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!-- Drinks -->
+    <section class="drinks">
+        <h2>🍹Drinks</h2>
+        <!-- Smoothie -->
+        <div class="drink-items">
+            <div class="smoothie">
+                <h3>Smoothie</h3>
+                <img src="strawberry smoothie.jpg" alt="A glass of Smoothie">
+                <p class="paragraph">Refreshing and creamy strawberry smoothie with fresh strawberries and chilled milk.
+                    Perfect for a healthy start or a sweet treat any time of the day.</p> <br>
+                <p class="price">Rs.199</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Smoothie">
+                    <input type="hidden" name="price" value="199">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <div class="mojito">
+                <h3>Mojito</h3>
+                <img src="mojito.webp" alt="A glass of fresh refreshing mojito">
+                <p class="paragraph">Cool and zesty mojito with fresh mint, lime, and soda. A refreshing drink perfect
+                    for summer days and lively gatherings with friends or family.</p> <br>
+                <p class="price">Rs.149</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Mojito">
+                    <input type="hidden" name="price" value="149">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <div class="coke">
+                <h3>Coca Cola</h3>
+                <img src="coke.jpg" alt="A can of chilled coca cola">
+                <p class="paragraph">Chilled Coca-Cola can - classic, refreshing soft drink with bold flavor and perfect
+                    fizz to complement any meal or snack. </p> <br> <br>
+                <p class="price">Rs.99</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Coca Cola">
+                    <input type="hidden" name="price" value="99">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="desserts">
+        <h2>🍰 Desserts</h2>
+        <div class="dessert-items">
+            <div class="jeri">
+                <h3>Jeri</h3>
+                <img src="jeri.jpg" alt="A plate of jeri">
+                <p class="paragraph">Crispy, golden spirals of deep-fried batter soaked in fragrant sugar syrup, Jeri is
+                    a traditional Nepali sweet enjoyed warm, offering a rich, syrupy indulgence.</p> <br> <br> <br>
+                <p class="price">Rs.39</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Jeri">
+                    <input type="hidden" name="price" value="39">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <div class="cheese-cake">
+                <h3>Cheese Cake</h3>
+                <img src="cheesecake.jpg" alt="a slice of cheese cake">
+                <p class="paragraph">Creamy, rich slice of cheesecake with a buttery graham cracker crust, topped with
+                    fresh, juicy strawberries. A perfect blend of sweet and tangy — a classic indulgence you can’t
+                    resist!</p> <br> <br>
+                <p class="price">Rs.159</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Cheese Cake">
+                    <input type="hidden" name="price" value="149">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+
+            <div class="strawberry-cake">
+                <h3>Strawberry Cake</h3>
+                <img src="strawberry cake.jpg" alt="A slice of strawberry cake">
+                <p class="paragraph">A slice of fluffy, moist strawberry layer cake frosted with rich strawberry
+                    buttercream. Bursting with real fruit flavor — a sweet and fruity delight.</p> <br> <br>
+                <p class="price">Rs.149</p> <br>
+                <form method="POST" action="order.php">
+                    <input type="hidden" name="item" value="Strawberry Cake">
+                    <input type="hidden" name="price" value="149">
+                    <button type="submit" class="button">Order Now</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p> &copy; 2025 TastyBites. All Rights Reserved </p>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+
+</html>
