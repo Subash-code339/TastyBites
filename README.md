@@ -14,8 +14,7 @@ It allows users to browse food items, add them to cart, and place orders through
 - Categories: Starters, Main Course, Drinks, Desserts
 - Add to Cart functionality (JavaScript)
 - Dynamic cart with total item count and total price
-- Order placement using PHP
-- Order confirmation page
+
 
 
 ## 🛠️ Technologies Used
